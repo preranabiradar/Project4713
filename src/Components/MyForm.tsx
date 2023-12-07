@@ -100,7 +100,6 @@ function MyForm() {
         <TextField
           fullWidth
           sx={{ display: "block", marginTop: "8px", marginBottom: "8px" }}
-          className={classes.phoneNumber}
           label="Phone Number"
           value={phoneNumber}
           onChange={handlePhoneNumberChange}
@@ -111,7 +110,6 @@ function MyForm() {
         <TextField
           fullWidth
           sx={{ display: "block", marginTop: "8px", marginBottom: "8px" }}
-          className={classes.email}
           label="Email"
           type="email"
           value={email}
