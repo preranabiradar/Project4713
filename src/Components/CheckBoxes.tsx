@@ -6,7 +6,6 @@ import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { GridExpandMoreIcon } from "@mui/x-data-grid";
 
 export default function CheckBoxs() {
-  const [expanded, setExpanded] = React.useState<string | false>(false);
   const [checkBoxData, setCheckBoxData] = React.useState([
     {
       department: "customer_service",
@@ -78,17 +77,10 @@ export default function CheckBoxs() {
     setCheckBoxData(newCheckData);
   };
 
-  const handleChange = (panel: string) => (newExpanded: boolean) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
   return (
     <div>
       {checkBoxData?.map((data) => (
-        <Accordion
-          expanded={expanded === data.department}
-          onChange={() => handleChange(data.department)}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<GridExpandMoreIcon />}>
             <FormControlLabel
               label={data.department}
