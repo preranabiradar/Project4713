@@ -78,17 +78,16 @@ export default function CheckBoxs() {
     setCheckBoxData(newCheckData);
   };
 
-  const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-      setExpanded(newExpanded ? panel : false);
-    };
+  const handleChange = (panel: string) => (newExpanded: boolean) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <div>
       {checkBoxData?.map((data) => (
         <Accordion
           expanded={expanded === data.department}
-          onChange={handleChange(data.department)}
+          onChange={() => handleChange(data.department)}
         >
           <AccordionSummary expandIcon={<GridExpandMoreIcon />}>
             <FormControlLabel

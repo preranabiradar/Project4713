@@ -82,7 +82,7 @@ function MyForm() {
 
   return (
     <Container maxWidth="sm">
-      <h1 className={classes.heading}>Login</h1>
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <TextField
           sx={{
